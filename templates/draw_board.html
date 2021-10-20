@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Boggle</title>
+    <link rel="stylesheet" href="/static/app.css">
+  </head>
+  <body>
+    <h1>Boggle Board</h1>
+    <section class ="boggle">
+      <table>
+        <tbody>
+          {% for row in board %}
+          <tr>
+            {% for cell in row %}
+            <td>
+              {{cell}}
+            </td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+
+<!--
+  <form method = "POST" class="add-word">
+  What word do you guess?<input id ="word" type ="text" name="word" class="word">
+  <button>Submit</button>
+</form> -->
+<section id="boggle" class ="boggle">
+
+<form method ='POST' class="add-word">
+  <input id ="word" name="word" class="word" autofocus>
+  <button>Enter</button>
+</form>
+
+<section>
+  <p>High Score: 
+    <b class="highscore">{{ highscore }}</b> 
+    in {{ nplays }} plays
+  </p>
+
+  <p>
+    Score: <b class="score">0</b>
+    Seconds Left: <b class="timer"></b>
+  </p>
+</section>
+
+<section class ="message">
+  <p class="msg">
+
+  </p>
+
+</section>
+
+
+<section >
+  <ul class="words">
+
+  </ul>
+
+</section>
+</section>
+<script src="http://unpkg.com/jquery"></script>
+<script src="http://unpkg.com/axios/dist/axios.js"></script>
+<script src="static/app.js"></script>
+<script> let game = new BoggleGame("boggle", 60);</script>
+</body>
+</html>

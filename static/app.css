@@ -1,0 +1,14 @@
+.boggle{
+  background-color: rgb(195, 192, 192);
+  width:30%;
+  padding: 20px;
+  margin:5px;
+}
+td{
+  padding:10px;
+  margin-left: 10px;
+  font-size: 30px;
+}
+h1{
+  margin-left:30px;
+}
